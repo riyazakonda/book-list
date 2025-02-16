@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import {
   addToStoredReadList,
   addToStoredWishList,
@@ -25,9 +25,11 @@ const BookDetails = () => {
     publisher,
     yearOfPublishing,
   } = book;
+  const navigate = useNavigate();
 
   const heandleToRed = (id) => {
     addToStoredReadList(id);
+    navigate("/listedBook");
   };
 
   const heandleWishList = (id) => {

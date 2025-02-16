@@ -6,7 +6,7 @@ const Book = ({ book }) => {
     bookName,
     author,
     image,
-
+    totalPages,
     rating,
     category,
     tags,
@@ -33,6 +33,7 @@ const Book = ({ book }) => {
           <div className="border-t-2 border-dashed py-2"></div>
           <div className="card-actions justify-between mb-4">
             <div className="badge badge-outline">{category}</div>
+            <div>{totalPages}</div>
             <div className="badge badge-outline">
               {rating}
               <FaRegStar />
